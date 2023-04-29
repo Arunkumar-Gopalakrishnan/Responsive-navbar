@@ -1,12 +1,19 @@
 //using selectors inside the element
 
 const questionSection = document.querySelectorAll(".question");
-console.log(questionSection);
+// console.log(questionSection);
 questionSection.forEach(function (element) {
-  console.log(element);
+  // console.log(element);
   let buttonAccess = element.querySelector(".question-btn");
-  console.log(buttonAccess);
+  // console.log(buttonAccess);
   buttonAccess.addEventListener("click", function () {
+    questionSection.forEach(function (item) {
+      // console.log(element);
+      console.log(item);
+      if (item !== element) {
+        item.classList.remove("show-text");
+      }
+    });
     element.classList.toggle("show-text");
   });
 });
