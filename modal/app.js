@@ -11,7 +11,7 @@ let closeBtn =document.querySelector(".close-btn");
 modalBtn.addEventListener('click',myRemoveFunction);
 closeBtn.addEventListener('click',myAddFunction);
 
-function myRemoveFunction()
+function myRemoveFunction() 
 {
     document.querySelector('.modal-overlay').classList.add('open-modal');
 }
